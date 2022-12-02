@@ -17,16 +17,23 @@ https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=512c087cc4e125c35b
     castInfo && (
       <div>
         <ul>
-          {castInfo.cast.map(e => (
-            <li key={e.id}>
-              <img
-                src={`https://image.tmdb.org/t/p/w200${e.profile_path}`}
-                alt={e.name}
-              />
-              <h4>{e.name}</h4>
-              <p>Character: {e.character}</p>
-            </li>
-          ))}
+          {castInfo.cast.map(e => {
+            return (
+              <li key={e.id}>
+                <img
+                  src={
+                    e.profile_path
+                      ? `https://image.tmdb.org/t/p/w200${e.profile_path}`
+                      : `https://media.istockphoto.com/id/1191260149/vector/sunglasses-emoticon-with-big-smile.jpg?s=612x612&w=0&k=20&c=fiv2tpNsvT0NqhOLQiC2A8NbVlGEZJR9YTvl8JIDpis=`
+                  }
+                  alt={e.name}
+                  style={{ width: '200px' }}
+                />
+                <h4>{e.name}</h4>
+                <p>Character: {e.character}</p>
+              </li>
+            );
+          })}
         </ul>
       </div>
     )
