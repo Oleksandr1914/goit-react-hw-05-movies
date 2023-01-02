@@ -5,8 +5,8 @@ import Layout from './Layout/Layout';
 const Home = lazy(() => import('./Home/Home'));
 const Movies = lazy(() => import('./Movies/Movies'));
 const DetailsMovie = lazy(() => import('./DetailsMovie/DetailsMovie'));
-const Cast = lazy(() => import('./DetailsMovie/Cast'));
-const Reviews = lazy(() => import('./DetailsMovie/Reviews'));
+const Cast = lazy(() => import('./DetailsMovie/Cast/Cast'));
+const Reviews = lazy(() => import('./DetailsMovie/Reviews/Reviews'));
 
 export const App = () => {
   return (

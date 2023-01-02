@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const ContainerMovies = styled.div`
   min-height: 100vh;
   padding-top: 20px;
   padding-bottom: 20px;
-  background-size: 100%;
-  background-position: center;
+  background-color: #171717;
+  /* background-image: url(https://oir.mobi/uploads/posts/2021-03/thumbs/1616971189_45-p-temnii-fon-dlya-rabochego-stola-48.jpg);
   background-repeat: no-repeat;
-  background-image: url(https://oir.mobi/uploads/posts/2021-03/1616536897_49-p-krasno-chernii-fon-54.jpg);
-
+  background-size: 100% 100%;
+  background-position: top; */
   div {
   }
 `;
@@ -28,6 +28,9 @@ export const List = styled.ul`
       color: #f4dada;
       width: 180px;
     }
+    a:hover {
+      color: #d73107;
+    }
   }
 `;
 
@@ -38,7 +41,7 @@ export const Submit = styled.form`
     width: 200px;
     height: 30px;
     border-radius: 5px;
-    background-color: #e7e7e776;
+    background-color: #e7e7e7a8;
     font-size: 20px;
   }
   button {

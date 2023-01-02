@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { ReviewsList } from './DetailsMovieStyled';
+import { BoxReviews, ReviewsList, ReviewsP } from '../DetailsMovieStyled';
 
 const Reviews = () => {
   const [reviews, setRevies] = useState(null);
@@ -18,7 +18,7 @@ https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=512c087cc4e125c35b
   return (
     reviews &&
     (reviews.results.length !== 0 ? (
-      <div>
+      <BoxReviews>
         <ReviewsList>
           {reviews.results.map(e => (
             <li key={e.id}>
@@ -27,9 +27,9 @@ https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=512c087cc4e125c35b
             </li>
           ))}
         </ReviewsList>
-      </div>
+      </BoxReviews>
     ) : (
-      <p>We don`t have any reviews for this movie.</p>
+      <ReviewsP>We don`t have any reviews for this movie.</ReviewsP>
     ))
   );
 };

@@ -2,7 +2,7 @@ import { useState, useEffect, Suspense } from 'react';
 import { Link, useLocation, useSearchParams } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
 import Search from './Search';
-import { Container, List } from 'components/Home/HomeStyled';
+import { ContainerMovies, List } from 'components/Movies/MoviesStyled';
 
 const Movies = () => {
   const [searchMovies, setSearchMovies] = useState(null);
@@ -23,7 +23,7 @@ const Movies = () => {
   }, [name]);
 
   return (
-    <Container>
+    <ContainerMovies>
       <div>
         <Search />
         {searchMovies && (
@@ -50,7 +50,7 @@ const Movies = () => {
       <Suspense fallback={<div>Loading...</div>}>
         <Outlet />
       </Suspense>
-    </Container>
+    </ContainerMovies>
   );
 };
 

@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const Cont = styled.div`
   box-sizing: border-box;
-  width: 100vw;
-  overflow-x: hidden;
+  /* width: 100vw; */
+  overflow: hidden;
 `;
 
 export const Box = styled.div`
